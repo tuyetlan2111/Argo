@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 6006",
-    "build": "build-storybook"
+    "build": "build-storybook",
+    "chromatic": "npx chromatic --project-token=fe338a1efb33"
   },
   "keywords": [],
   "author": "",
@@ -52,5 +53,7 @@
     "sass": "^1.55.0",
     "storybook-color-picker": "^2.3.1",
     "styled-components": "^5.3.3"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "argo@1.0.0"
 }
