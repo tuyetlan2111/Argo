@@ -6,7 +6,7 @@ import { Page } from '../component/Page';
 // import { Page } from '../component/Page';
 
 export default {
-  title: 'Example/Page',
+  title: 'Page',
   component: Page,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout

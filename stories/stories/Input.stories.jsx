@@ -2,7 +2,7 @@ import React from 'react';
 import { Input } from '../component/Input';
 
 export default {
-  title: 'Example/Input',
+  title: 'Input',
   component: Input,
   args:{
     placeholder: 'Please input value here',

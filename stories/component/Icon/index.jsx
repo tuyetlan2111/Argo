@@ -25,13 +25,13 @@ export const Icon = ({ type, size }) => {
 }
 
 Icon.prototype = {
-  small: PropTypes.string,
+  // small: PropTypes.string,
   type: PropTypes.string,
   // backgroundColor: PropTypes.string,
 }
 
 Icon.defaultProps = {
-  small: 'small',
+  // small: 'small',
   type: 'Add',
   // backgroundColor
 }

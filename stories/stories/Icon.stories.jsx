@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from '../component/Icon';
 
 export default {
-  title: 'Example/Icon',
+  title: 'Icon',
   component: Icon,
   args:{
     size: 'small',
@@ -17,7 +17,7 @@ export default {
       options: ['Add', 'ArrowDown'],
       control: { type: 'select' },
     }
-    
+
   },
 };
 

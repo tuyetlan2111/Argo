@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../component/Button';
 
 export default {
-  title: 'Example/Button',
+  title: 'Button',
   component: Button,
   args: {
     primary: true,
@@ -30,3 +30,5 @@ export default {
 };
 
 export const Template = (args) => (<Button {...args} />);
+
+export const Danger = (args) => (<Button {...args}/>)

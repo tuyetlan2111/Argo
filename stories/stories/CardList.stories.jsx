@@ -31,7 +31,7 @@ const data = [
   }
 ]
 export default {
-  title: 'Example/CardList',
+  title: 'CardList',
   component: CardList,
   args: {
     cards: data

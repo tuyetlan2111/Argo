@@ -13,7 +13,7 @@ const data =
   }
 
 export default {
-  title: 'Example/CardItem',
+  title: 'CardItem',
   component: CardItem,
   args: {
     card: data
