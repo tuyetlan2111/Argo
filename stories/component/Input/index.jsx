@@ -1,21 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import '../../assets/style.css'
 
-export const Input = ({ placeholder, paddingLeft, bgColor }) => (
-  <div>
-    <input type='text' placeholder={placeholder} style={{paddingLeft: paddingLeft + 'px',  background: bgColor}}/>
-  </div>
-);
+export const Input = ({ placeholder, name, label, onChange, type, disabled }) => {
+  const [value, setValue] = useState('')
+  const [error, setError] = useState(false)
+  const handleChangeInput = (e) => {
+    setValue(e.target.value)
+    if (value.length <= 2) {
+      setError(true)
+    } else {
+      setError(false)
+    }
+    onChange()
+  }
+  useEffect(() => {
 
-
-Input.propTypes = {
-  placeholder: PropTypes.string.isRequired,
-  paddingLeft: PropTypes.string,
-  bgColor: PropTypes.string,
+  }, [value])
+  return (
+    <div className={`form__group ${error ? 'error' : ''} ${disabled ? 'disabled' : ''}`}>
+      <input type={type} class="form__field" value={value}
+        placeholder={placeholder} name={name} id={name} onChange={handleChangeInput} />
+      <label for={name} class="form__label">{label}</label>
+    </div>
+  )
 };
 
-Input.defaultProps = {
-  placeholder: 'Please input value here',
-  paddingLeft: '0',
-  bgColor: '#cccccc',
+Input.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  label: PropTypes.string,
+  onChange: PropTypes.func,
+  type: PropTypes.oneOf(['text', 'password', 'number']),
+  disabled: PropTypes.bool
 };

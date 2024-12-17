@@ -9,3 +9,4 @@ export const parameters = {
   },
   showPanel: true,
 }
+export const tags = ["autodocs"];

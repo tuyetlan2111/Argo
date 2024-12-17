@@ -5,30 +5,28 @@ export default {
   title: 'Button',
   component: Button,
   args: {
-    primary: true,
+    isPrimary: true,
     label: 'Button',
     size: 'medium',
     backgroundColor: '#ec9031',
-    color: '#fff'
+    color: '#fff',
+    isDisabled: false
   },
   argTypes: {
-    label: {
-      name: 'Label Text'
-    },
-
     backgroundColor: {
       control: 'color',
-      // table:{
-      //   disable: true
-      // }
     },
     size: {
       options: ['small', 'medium', 'large'],
       control: { type: 'select' },
+    },
+    isDisabled: {
+      options: [true, false],
+      control: { type: 'select' }
     }
   },
 };
 
 export const Template = (args) => (<Button {...args} />);
 
-export const Danger = (args) => (<Button {...args}/>)
+export const Danger = (args) => (<Button {...args} />)

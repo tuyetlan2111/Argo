@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './cardList.css'
+import '../../assets/style.css'
 import { CardItem } from '../CardItem';
 
-export const CardList = ({ cards , listView}) => (
-  <div className="list-card">
+export const CardList = ({ cards , col}) => (
+  <div className="list-card" data-col={col}>
     {
       cards.map((card, index)=>(
         <CardItem card={card} key={index}/>
@@ -16,10 +16,6 @@ export const CardList = ({ cards , listView}) => (
 
 CardList.propTypes = {
   cards: PropTypes.array,
-  listView: PropTypes.bool
+  col: PropTypes.number
 
-};
-
-CardList.defaultProps = {
-  listView: false
 };
