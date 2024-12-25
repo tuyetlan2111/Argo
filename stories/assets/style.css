@@ -260,7 +260,7 @@ li {
 .form__field {
   width: calc(100% - 33px);
   min-height: 32px;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   outline: 0;
   padding: 8px 16px;
   background: transparent;
@@ -280,10 +280,6 @@ li {
 }
 
 .form__field:focus {
-  /* padding-bottom: 6px; */
-  /* font-weight: 700; */
-  /* border-width: 2px; */
-  /* border-image: linear-gradient(to right, #11998e, #38ef7d); */
   border-image-slice: 1;
   border-color: #11998e;
 }
@@ -299,9 +295,12 @@ li {
   color: #b81a35;
 }
 
-.form__group.disabled {
+.form__group.disabled input{
   background-color: #d1d5db;
   pointer-events: none;
+}
+.form__group.disabled label {
+  display: none;
 }
 
 /* reset input */
@@ -729,4 +728,13 @@ label {
 .list-tag {
   display: flex;
   gap: 8px;
+}
+
+/* LIST */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list a {
+  display: inline-block;
 }

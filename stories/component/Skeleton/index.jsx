@@ -1,7 +1,6 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 import '../../assets/style.css'
-
 export const Skeleton = ({ height, width, bgColor, variant }) => {
   return (
     <div className={`is-loading ${variant}`}

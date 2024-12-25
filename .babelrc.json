@@ -32,7 +32,7 @@
         "loose": true
       }
     ],
-    ["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
+    // ["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-syntax-dynamic-import",
     [

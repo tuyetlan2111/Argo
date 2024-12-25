@@ -6,21 +6,20 @@ export const Input = ({ placeholder, name, label, onChange, type, disabled }) =>
   const [value, setValue] = useState('')
   const [error, setError] = useState(false)
   const handleChangeInput = (e) => {
-    setValue(e.target.value)
-    if (value.length <= 2) {
+    const valueInput = e.target.value
+    setValue(valueInput)
+    if (valueInput.length === 0) {
       setError(true)
     } else {
       setError(false)
     }
     onChange()
   }
-  useEffect(() => {
 
-  }, [value])
   return (
     <div className={`form__group ${error ? 'error' : ''} ${disabled ? 'disabled' : ''}`}>
       <input type={type} class="form__field" value={value}
-        placeholder={placeholder} name={name} id={name} onChange={handleChangeInput} />
+        placeholder={placeholder} name={name} id={name} onChange={handleChangeInput} onFocus={handleChangeInput}/>
       <label for={name} class="form__label">{label}</label>
     </div>
   )
